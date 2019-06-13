@@ -66,6 +66,9 @@ public class Counter extends JFrame implements ActionListener {
 			text.setText(key);// 如果data为真，则取代之前的0
 		else if ((key.equals(".")) && (text.getText().indexOf(".") <= 0))
 			text.setText(text.getText() + ".");
+		else if (operator.equals("-"))
+			result -= Double.valueOf(text.getText());
+	// 如果operator等于=“-”，result=result-得到的已转换为双精度浮点型的文本值
 		// 否则key=.与取值为小于0的值就给文本内容加一个.
 		else if (!key.equals("."))
 			text.setText(text.getText() + key);
